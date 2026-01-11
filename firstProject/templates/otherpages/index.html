@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="{% static "style.css" %}">
+</head>
+<body>
+
+    <header>
+    <nav style="background:#0d6efd; padding:15px; text-align:center;">
+        <a href="{% url 'home' %}"
+           style="color:white; margin:15px; text-decoration:none; font-size:18px;">
+           Home
+        </a>
+
+        <a href="{%url 'about'%}"
+           style="color:white; margin:15px; text-decoration:none; font-size:18px;">
+           About
+        </a>
+
+        <a href="{% url 'contact' %}"
+           style="color:white; margin:15px; text-decoration:none; font-size:18px;">
+           Contact
+        </a>
+    </nav>
+</header>
+
+    <div class="container">
+        <h1>My First Django Project</h1>
+        <p>
+            This is my first Django web application.<br>
+            I am learning Django step by step.
+        </p>
+
+        <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <footer>
+        <p>© 2026 | Created by Vardan</p>
+    </footer>
+
+</body>
+</html>
