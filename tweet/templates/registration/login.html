@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 75vh;">
+
+  <div class="card p-4 w-100" style="max-width: 380px;">
+    
+    <h4 class="text-center mb-4 fw-semibold">Sign in to Talksy</h4>
+
+    <form method="post">
+      {% csrf_token %}
+
+      <!-- Username -->
+      <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input type="text" name="username" class="form-control" placeholder="Enter username" required>
+      </div>
+
+      <!-- Password -->
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+      </div>
+
+      <!-- Errors -->
+      {% if form.errors %}
+        <div class="text-danger small mb-3">
+          Invalid username or password
+        </div>
+      {% endif %}
+
+      <!-- Button -->
+      <button type="submit" class="btn btn-primary w-100">
+        Login
+      </button>
+    </form>
+
+    <!-- Footer -->
+    <p class="text-center text-muted mt-3 mb-0">
+      Don’t have an account?
+      <a href="{% url 'register' %}" class="text-decoration-none">Sign up</a>
+    </p>
+
+  </div>
+
+</div>
+{% endblock %}
