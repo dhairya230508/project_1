@@ -1,10 +1,48 @@
 {% extends "layout.html" %}
 
-{% block title %}
-App
-{% endblock %}
+{% block title %}App{% endblock %}
 
 {% block content %}
-this is App
-{% endblock  %}
+<div class="bg-white py-10">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
+    <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+      {% for chai in chais %}
+        <div class="group border rounded-lg p-4 shadow hover:shadow-lg transition">
+
+          {% if chai.chai_image %}
+            <img
+              src="{{ chai.chai_image.url }}"
+              alt="{{ chai.name }}"
+              class="aspect-square w-full rounded-lg object-cover"
+            />
+          {% else %}
+            <div class="aspect-square w-full bg-gray-200 flex items-center justify-center">
+              No Image
+            </div>
+          {% endif %}
+
+          <h3 class="mt-4 text-lg font-semibold text-gray-700">
+            {{ chai.name }}
+          </h3>
+
+          <p class="mt-1 text-sm text-gray-500">
+            {{ chai.description }}
+          </p>
+
+          <p class="mt-2 text-xl font-bold text-gray-900">
+            ₹{{ chai.price }}
+          </p>
+
+          <a href="{% url "chaiDetail" chai.id %}"
+            class="mt-4 inline-block w-full text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+            View Details
+          </a>
+        </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+{% endblock %}
