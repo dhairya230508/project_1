@@ -9,3 +9,8 @@ def about(request):
 
 def menu(request):
     return render(request, 'menu.html')
+
+def food(request):
+    return render(request,'food.html')
+def combo(request):
+    return render(request,'combo.html')
