@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About | My Django Project</title>
+    <link rel="stylesheet" href="{% static "about.css" %}">
+
+</head>
+<body>
+
+    <header>
+    <nav style="background:#0d6efd; padding:15px; text-align:center;">
+        <a href="{% url 'home' %}"
+           style="color:white; margin:15px; text-decoration:none; font-size:18px;">
+           Home
+        </a>
+
+        <a href="{%url 'about'%}"
+           style="color:white; margin:15px; text-decoration:none; font-size:18px;">
+           About
+        </a>
+
+        <a href="{% url 'contact' %}"
+           style="color:white; margin:15px; text-decoration:none; font-size:18px;">
+           Contact
+        </a>
+    </nav>
+</header>
+
+    <div class="container">
+
+        <div class="card">
+            <h1>Who Am I?</h1>
+            <p>
+                Hello! My name is <strong>Vardan</strong>.  
+                I am an MCA student and currently learning <strong>Django</strong> for web development.
+                This project is part of my learning journey to understand backend development,
+                databases, and web application logic.
+            </p>
+        </div>
+
+        <div class="card">
+            <h1>About This Project</h1>
+            <p>
+                This is my first Django project.  
+                The goal of this project is to learn:
+            </p>
+            <ul>
+                <li>How Django works</li>
+                <li>URL routing</li>
+                <li>Templates and views</li>
+                <li>Basic frontend design</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h1>My Goal</h1>
+            <p>
+                My aim is to become a skilled backend developer and build real-world web applications
+                using Django and Python. I will keep improving this project as I learn new concepts.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 | Created by Vardan</p>
+    </footer>
+
+</body>
+</html>

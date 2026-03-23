@@ -1,0 +1,244 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Chai Hub | About
+{% endblock %}
+
+{% block style %}
+<style>
+    .about-soft-glass {
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        box-shadow: 0 24px 60px rgba(71, 31, 10, 0.14);
+    }
+
+    .about-stage {
+        perspective: 1400px;
+    }
+
+    .about-stack {
+        transform-style: preserve-3d;
+    }
+
+    .about-card-lift {
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .about-card-lift:hover {
+        transform: translateY(-8px) rotateX(5deg) rotateY(-5deg);
+        box-shadow: 0 26px 48px rgba(120, 53, 15, 0.14);
+    }
+
+    .about-panel-shadow {
+        box-shadow:
+            0 34px 80px rgba(92, 34, 18, 0.18),
+            inset 0 1px 0 rgba(255, 255, 255, 0.45);
+    }
+
+    @media (min-width: 1024px) {
+        .about-stack {
+            animation: about-hover-float 7s ease-in-out infinite;
+        }
+    }
+
+    @media (max-width: 1023px) {
+        .about-stack,
+        .about-card-lift:hover {
+            transform: none;
+            animation: none;
+        }
+    }
+
+    @keyframes about-hover-float {
+        0%, 100% {
+            transform: rotateX(8deg) rotateY(-10deg) translateY(0);
+        }
+        50% {
+            transform: rotateX(2deg) rotateY(-3deg) translateY(-12px);
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+<section class="relative overflow-hidden" style="background: radial-gradient(circle at top left, #fff8ef 0%, #fee7d6 34%, #d25b54 100%);">
+    <div class="absolute inset-0">
+        <div class="absolute left-[-5rem] top-[-4rem] h-56 w-56 rounded-full bg-amber-200/70 blur-3xl"></div>
+        <div class="absolute right-[-4rem] top-20 h-60 w-60 rounded-full bg-orange-300/50 blur-3xl"></div>
+        <div class="absolute bottom-[-6rem] left-1/3 h-64 w-64 rounded-full bg-amber-900/10 blur-3xl"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-24">
+        <div class="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+            <div>
+                <span class="inline-flex rounded-full border border-amber-900/15 bg-white/70 px-4 py-1 text-sm font-semibold uppercase tracking-[0.22em] text-amber-900 about-soft-glass">
+                    About ChaiHub    
+                </span>
+
+                <h1 class="mt-6 max-w-3xl text-5xl font-black leading-tight text-stone-900 md:text-6xl">
+                    ChaiHub was built
+                    <span class="block bg-gradient-to-r from-amber-950 via-orange-700 to-amber-500 bg-clip-text text-transparent">
+                        around ritual, not rush.
+                    </span>
+                </h1>
+
+                <p class="mt-6 max-w-2xl text-lg leading-8 text-stone-700">
+                    We wanted this page to feel different from the home page, just like a quiet chai break feels different from a busy first impression. Same color story, same warmth, but a more thoughtful and editorial mood.
+                </p>
+
+                <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                    <div class="rounded-[1.8rem] border border-white/55 bg-white/72 p-5 about-soft-glass">
+                        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-amber-800">What We Believe</p>
+                        <p class="mt-3 text-2xl font-black text-stone-900">A cup should slow the room down.</p>
+                    </div>
+                    <div class="rounded-[1.8rem] border border-white/55 bg-white/72 p-5 about-soft-glass">
+                        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-amber-800">What We Serve</p>
+                        <p class="mt-3 text-2xl font-black text-stone-900">Comfort with real spice and body.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-stage mx-auto w-full max-w-xl">
+                <div class="about-stack relative">
+                    <div class="absolute inset-0 translate-x-6 translate-y-6 rounded-[2.3rem] bg-stone-950/10"></div>
+                    <div class="absolute inset-0 translate-x-3 translate-y-3 rounded-[2.3rem] border border-white/30 bg-white/20"></div>
+
+                    <div class="relative overflow-hidden rounded-[2.3rem] border border-white/50 bg-white/60 p-5 about-panel-shadow">
+                        <div class="rounded-[1.9rem] bg-gradient-to-br from-stone-950 via-amber-950 to-orange-700 p-7 text-white">
+                            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-amber-200">House Note</p>
+                            <p class="mt-5 text-3xl font-black leading-tight">
+                                Not every chai moment should feel loud.
+                            </p>
+                            <p class="mt-4 text-sm leading-7 text-stone-200">
+                                Some cups are for rain, some for conversation, some for the pause between two busy hours. ChaiHub is designed around that pause.
+                            </p>
+
+                            <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                                <div class="rounded-[1.5rem] border border-white/15 bg-white/10 p-4">
+                                    <p class="text-xs uppercase tracking-[0.24em] text-amber-100">Aroma</p>
+                                    <p class="mt-2 text-xl font-black">Cardamom, ginger, milk</p>
+                                </div>
+                                <div class="rounded-[1.5rem] border border-white/15 bg-white/10 p-4">
+                                    <p class="text-xs uppercase tracking-[0.24em] text-amber-100">Atmosphere</p>
+                                    <p class="mt-2 text-xl font-black">Warm, calm, familiar</p>
+                                </div>
+                            </div>
+
+                            <div class="mt-8 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-amber-100">
+                                <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2">slow brewed</span>
+                                <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2">made to linger</span>
+                                <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2">chai first</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-stone-950 px-6 py-20 text-stone-100 lg:px-10">
+    <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-amber-300">Our Approach</p>
+            <h2 class="mt-4 text-4xl font-black text-white">Three things we want every chai to do well.</h2>
+            <p class="mt-5 text-lg leading-8 text-stone-300">
+                Instead of saying everything, we focus on three essentials: the cup should smell inviting, feel satisfying, and leave behind a clean warm finish.
+            </p>
+        </div>
+
+        <div class="mt-12 grid gap-8 lg:grid-cols-3">
+            <article class="about-card-lift rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,_rgba(146,64,14,0.28),_rgba(28,25,23,0.96))] p-7">
+                <p class="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">01</p>
+                <h3 class="mt-4 text-2xl font-black text-white">Start Strong</h3>
+                <p class="mt-4 text-sm leading-7 text-stone-300">
+                    The first sip should immediately carry tea depth and gentle spice, not feel watery or flat.
+                </p>
+            </article>
+
+            <article class="about-card-lift rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,_rgba(251,146,60,0.24),_rgba(28,25,23,0.96))] p-7">
+                <p class="text-sm font-semibold uppercase tracking-[0.24em] text-orange-200">02</p>
+                <h3 class="mt-4 text-2xl font-black text-white">Stay Balanced</h3>
+                <p class="mt-4 text-sm leading-7 text-stone-300">
+                    Milk, spice and tea should support one another so no single note becomes too sharp or too sweet.
+                </p>
+            </article>
+
+            <article class="about-card-lift rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,_rgba(252,211,77,0.24),_rgba(28,25,23,0.96))] p-7">
+                <p class="text-sm font-semibold uppercase tracking-[0.24em] text-yellow-100">03</p>
+                <h3 class="mt-4 text-2xl font-black text-white">Finish Warm</h3>
+                <p class="mt-4 text-sm leading-7 text-stone-300">
+                    A good cup should leave comfort behind, the kind that makes you want to pause before moving on.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="bg-amber-50 px-6 py-20 lg:px-10">
+    <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="rounded-[2rem] border border-amber-900/10 bg-white p-8 shadow-[0_25px_60px_rgba(120,53,15,0.1)]">
+            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-amber-800">Behind The Cup</p>
+            <h2 class="mt-4 text-4xl font-black text-stone-900">The feeling matters as much as the recipe.</h2>
+            <p class="mt-5 text-lg leading-8 text-stone-700">
+                We think people come back for chai because of atmosphere as much as flavor. That is why ChaiHub leans into warmth, softness and a little elegance.
+            </p>
+
+            <div class="mt-8 space-y-5">
+                <div class="rounded-3xl bg-amber-100/70 p-5">
+                    <p class="text-sm font-bold uppercase tracking-[0.22em] text-amber-900">Texture</p>
+                    <p class="mt-2 text-stone-700">Creamy enough to feel complete, but still led by tea.</p>
+                </div>
+                <div class="rounded-3xl bg-orange-100/80 p-5">
+                    <p class="text-sm font-bold uppercase tracking-[0.22em] text-orange-900">Spice</p>
+                    <p class="mt-2 text-stone-700">Clear and aromatic, not heavy or confusing.</p>
+                </div>
+                <div class="rounded-3xl bg-amber-200/60 p-5">
+                    <p class="text-sm font-bold uppercase tracking-[0.22em] text-stone-900">Mood</p>
+                    <p class="mt-2 text-stone-700">The kind of calm that makes a short break feel longer.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2">
+            <div class="about-card-lift rounded-[2rem] border border-amber-900/10 bg-white p-7 shadow-[0_18px_45px_rgba(120,53,15,0.08)]">
+                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-amber-800">House Character</p>
+                <h3 class="mt-3 text-2xl font-black text-stone-900">What defines us</h3>
+                <div class="mt-6 space-y-4 text-sm leading-7 text-stone-700">
+                    <p><span class="font-semibold text-amber-900">Rooted:</span> familiar Indian chai notes stay at the center.</p>
+                    <p><span class="font-semibold text-amber-900">Refined:</span> the page feels polished without losing honesty.</p>
+                    <p><span class="font-semibold text-amber-900">Relaxed:</span> nothing should feel cold or overdesigned.</p>
+                </div>
+            </div>
+
+            <div class="about-card-lift rounded-[2rem] border border-amber-900/10 bg-stone-900 p-7 text-white shadow-[0_18px_45px_rgba(28,25,23,0.24)]">
+                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-amber-300">Serving Thought</p>
+                <h3 class="mt-3 text-2xl font-black">Same palette, different mood</h3>
+                <p class="mt-6 text-sm leading-7 text-stone-300">
+                    Home is more energetic. About is slower, more reflective and more textural, while still staying inside the same amber, red and stone color family.
+                </p>
+            </div>
+
+            <div class="about-card-lift rounded-[2rem] border border-amber-900/10 bg-gradient-to-br from-amber-900 to-orange-700 p-7 text-white shadow-[0_18px_45px_rgba(120,53,15,0.18)] md:col-span-2">
+                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-amber-100">Why People Stay</p>
+                <div class="mt-4 grid gap-6 md:grid-cols-3">
+                    <div>
+                        <h3 class="text-xl font-black">It Feels Familiar</h3>
+                        <p class="mt-2 text-sm leading-7 text-amber-50/90">The flavors point back to everyday chai memories, not generic tea branding.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-black">It Feels Calm</h3>
+                        <p class="mt-2 text-sm leading-7 text-amber-50/90">The experience is designed to create a pause, not just fill a page.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-black">It Feels Thoughtful</h3>
+                        <p class="mt-2 text-sm leading-7 text-amber-50/90">Every section is meant to support the same story: warmth, spice and quiet comfort.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

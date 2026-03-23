@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" role="img" aria-labelledby="title desc">
+  <title id="title">Teapot with chai glasses and biscuit packet</title>
+  <desc id="desc">A silver kettle beside two glasses of chai and a biscuit packet on a warm red background.</desc>
+  <rect width="760" height="470" rx="34" fill="#cf544f"/>
+  <path d="M144 380H610" stroke="#111111" stroke-width="8" stroke-linecap="round"/>
+  <path d="M620 380H635" stroke="#111111" stroke-width="8" stroke-linecap="round"/>
+  <path d="M650 380H678" stroke="#111111" stroke-width="8" stroke-linecap="round"/>
+
+  <path d="M220 88C220 36 292 10 370 10C450 10 522 34 522 86" fill="none" stroke="#111111" stroke-width="7" stroke-linecap="round"/>
+  <path d="M226 87L239 137" fill="none" stroke="#111111" stroke-width="7" stroke-linecap="round"/>
+  <path d="M520 84L506 149" fill="none" stroke="#111111" stroke-width="7" stroke-linecap="round"/>
+
+  <path d="M286 126H438" fill="none" stroke="#111111" stroke-width="7" stroke-linecap="round"/>
+  <rect x="294" y="111" width="134" height="40" rx="8" fill="#f4f4f4" stroke="#111111" stroke-width="7"/>
+  <path d="M314 84C326 78 342 78 354 84L349 111H319L314 84Z" fill="#d9d9d9" stroke="#111111" stroke-width="7" stroke-linejoin="round"/>
+
+  <path d="M224 168C224 147 241 130 262 130H438C499 130 548 179 548 240V300C548 343 514 377 471 377H248C219 377 196 354 196 325V206C196 185 203 168 224 168Z" fill="#d8d8d8" stroke="#111111" stroke-width="7"/>
+  <path d="M218 194C218 168 230 151 246 142C227 154 214 181 214 212V332C214 353 226 370 244 377H228C205 377 186 358 186 335V212C186 201 188 188 194 176C199 165 208 154 218 194Z" fill="#bfbfbf"/>
+  <path d="M390 130H438C499 130 548 179 548 240V300C548 343 514 377 471 377H390V130Z" fill="#e7e7e7"/>
+  <path d="M410 176C440 176 464 200 464 230V292C464 302 456 310 446 310H410V176Z" fill="#ffffff" opacity="0.45"/>
+
+  <path d="M542 228C565 187 607 178 640 192C625 206 616 218 613 231C629 230 646 232 662 242C639 249 628 258 618 274C607 270 595 270 584 274C573 278 561 288 554 301" fill="#d8d8d8" stroke="#111111" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M550 251C576 249 598 254 616 270" fill="none" stroke="#111111" stroke-width="7" stroke-linecap="round"/>
+
+  <path d="M482 98L518 72L530 86L548 88L554 110H602V368H482Z" fill="#f5b300" stroke="#111111" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M498 96H570L554 78L530 78L518 65L498 80Z" fill="#d0d0d0" stroke="#111111" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M514 128H590" stroke="#9b5b00" stroke-width="10" stroke-linecap="round"/>
+  <path d="M514 154H590" stroke="#9b5b00" stroke-width="10" stroke-linecap="round"/>
+  <path d="M514 180H590" stroke="#9b5b00" stroke-width="10" stroke-linecap="round"/>
+  <path d="M514 206H590" stroke="#9b5b00" stroke-width="10" stroke-linecap="round"/>
+  <text x="526" y="302" fill="#925200" font-size="54" font-weight="700" transform="rotate(-90 526 302)">biscuit</text>
+
+  <path d="M340 154C352 136 352 106 342 84" fill="none" stroke="#f7d0cf" stroke-width="7" stroke-linecap="round"/>
+  <path d="M354 209C366 188 366 158 356 132" fill="none" stroke="#f7d0cf" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+  <path d="M604 165C614 144 614 120 607 102" fill="none" stroke="#f7d0cf" stroke-width="7" stroke-linecap="round"/>
+  <path d="M612 227C622 206 620 182 614 164" fill="none" stroke="#f7d0cf" stroke-width="7" stroke-linecap="round" opacity="0.7"/>
+
+  <g transform="translate(328 182)">
+    <rect x="0" y="0" width="98" height="196" fill="#eec39e" stroke="#111111" stroke-width="7"/>
+    <rect x="0" y="0" width="98" height="38" fill="#d9edf8" opacity="0.7"/>
+    <path d="M0 38H98V156C98 171 86 183 71 183H27C12 183 0 171 0 156V38Z" fill="#d49758"/>
+    <path d="M0 54C10 46 20 42 28 42C36 42 44 45 49 51C54 45 62 42 70 42C79 42 88 46 98 54" fill="none" stroke="#111111" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M12 62V194" stroke="#f4d2b2" stroke-width="8"/>
+    <path d="M33 62V194" stroke="#f4d2b2" stroke-width="8"/>
+    <path d="M54 62V194" stroke="#f4d2b2" stroke-width="8"/>
+    <path d="M75 62V194" stroke="#f4d2b2" stroke-width="8"/>
+    <path d="M14 26H84" stroke="#f5dfd9" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+  </g>
+
+  <g transform="translate(572 188)">
+    <rect x="0" y="0" width="92" height="190" fill="#edbe9f" stroke="#111111" stroke-width="7"/>
+    <rect x="0" y="0" width="92" height="36" fill="#f0d4de" opacity="0.75"/>
+    <path d="M0 36H92V150C92 166 80 178 64 178H28C12 178 0 166 0 150V36Z" fill="#d39555"/>
+    <path d="M0 52C8 45 18 40 26 40C34 40 42 44 46 50C50 44 58 40 66 40C74 40 84 44 92 52" fill="none" stroke="#111111" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M10 58V188" stroke="#f1d0b1" stroke-width="8"/>
+    <path d="M29 58V188" stroke="#f1d0b1" stroke-width="8"/>
+    <path d="M48 58V188" stroke="#f1d0b1" stroke-width="8"/>
+    <path d="M67 58V188" stroke="#f1d0b1" stroke-width="8"/>
+  </g>
+</svg>
