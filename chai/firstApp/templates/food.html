@@ -7,56 +7,98 @@ Discover Our Food Collection
 {% block content %}
 <style>
     @keyframes slow-spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
     }
-    
+
     @keyframes float {
-        0%, 100% { transform: translateY(0px) scale(1); }
-        50% { transform: translateY(-20px) scale(1.02); }
+
+        0%,
+        100% {
+            transform: translateY(0px) scale(1);
+        }
+
+        50% {
+            transform: translateY(-20px) scale(1.02);
+        }
     }
 
     .animate-slow-spin {
         animation: slow-spin 25s linear infinite;
     }
-    
+
     .animate-float {
         animation: float 6s ease-in-out infinite;
     }
-    
+
     .animate-float-delayed {
         animation: float 7s ease-in-out infinite;
         animation-delay: 2s;
     }
 
     .glass-card {
-        background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.01) 100%);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(255,255,255,0.1);
-        box-shadow: 0 30px 60px -15px rgba(0,0,0,0.5), inset 0 1px 0 0 rgba(255,255,255,0.2);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
     }
-    
+
     .glass-pill {
-        background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.03));
-        border: 1px solid rgba(255,255,255,0.2);
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+
+    .order-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        padding: 0.5rem 1.5rem;
+        font-size: 0.875rem;
+        font-weight: 900;
+        color: rgb(30 27 23);
+        /* approx: stone-950 */
+        background: rgba(234, 88, 12, 0.9);
+        /* approx: amber-500/90 */
+        box-shadow: 0 15px 35px -18px rgba(234, 88, 12, 0.7);
+        transition: background-color 150ms ease, transform 150ms ease;
+        text-decoration: none;
+    }
+
+    .order-btn:hover {
+        background: rgb(251 191 36);
+        /* approx: amber-400 */
+        transform: translateY(-1px);
     }
 </style>
 
 <!-- Full Bleed Dark Section -->
-<section class="relative min-h-[90vh] bg-stone-950 overflow-hidden w-full m-0 p-0 text-white selection:bg-amber-500/30 selection:text-amber-200">
-    
+<section
+    class="relative min-h-[90vh] bg-stone-950 overflow-hidden w-full m-0 p-0 text-white selection:bg-amber-500/30 selection:text-amber-200">
+
     <!-- Dynamic Ambient Background Orbs -->
-    <div class="absolute -top-1/4 -right-1/4 h-[800px] w-[800px] rounded-full bg-gradient-to-br from-orange-600/30 to-red-600/10 blur-[120px] mix-blend-screen animate-slow-spin opacity-80 pointer-events-none"></div>
-    <div class="absolute -bottom-1/4 -left-1/4 h-[900px] w-[900px] rounded-full bg-gradient-to-tr from-amber-600/20 to-yellow-500/10 blur-[130px] mix-blend-screen animate-slow-spin opacity-70 pointer-events-none" style="animation-direction: reverse;"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-orange-500/10 blur-[100px] mix-blend-screen pointer-events-none"></div>
+    <div
+        class="absolute -top-1/4 -right-1/4 h-[800px] w-[800px] rounded-full bg-gradient-to-br from-orange-600/30 to-red-600/10 blur-[120px] mix-blend-screen animate-slow-spin opacity-80 pointer-events-none">
+    </div>
+    <div class="absolute -bottom-1/4 -left-1/4 h-[900px] w-[900px] rounded-full bg-gradient-to-tr from-amber-600/20 to-yellow-500/10 blur-[130px] mix-blend-screen animate-slow-spin opacity-70 pointer-events-none"
+        style="animation-direction: reverse;"></div>
+    <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-orange-500/10 blur-[100px] mix-blend-screen pointer-events-none">
+    </div>
 
     <div class="relative mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28 z-10">
-        
+
         <!-- Header -->
         <div class="text-center max-w-3xl mx-auto mb-20 animate-float">
-            <span class="inline-block glass-pill px-5 py-2 rounded-full text-xs font-bold tracking-[0.3em] uppercase text-amber-300 mb-6 shadow-2xl backdrop-blur-md">
+            <span
+                class="inline-block glass-pill px-5 py-2 rounded-full text-xs font-bold tracking-[0.3em] uppercase text-amber-300 mb-6 shadow-2xl backdrop-blur-md">
                 The ChaiHub Experience
             </span>
             <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight">
@@ -65,124 +107,224 @@ Discover Our Food Collection
                 </span>
             </h1>
             <p class="text-lg md:text-xl text-stone-300/80 font-light leading-relaxed max-w-2xl mx-auto">
-                Complement your chai with our authentic Indian snacks. Crispy, spicy, and perfectly paired for an unforgettable experience.
+                Complement your chai with our authentic Indian snacks. Crispy, spicy, and perfectly paired for an
+                unforgettable experience.
             </p>
         </div>
 
         <!-- Grid Layout -->
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 perspective-[1000px]">
-            
+
             <!-- Samosa -->
-            <div class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:rotate-1 hover:border-amber-500/40 hover:shadow-[0_45px_100px_-20px_rgba(234,88,12,0.4)] relative overflow-hidden">
-                <div class="absolute -right-10 -top-10 w-40 h-40 bg-amber-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div
+                class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:rotate-1 hover:border-amber-500/40 hover:shadow-[0_45px_100px_-20px_rgba(234,88,12,0.4)] relative overflow-hidden">
+                <div
+                    class="absolute -right-10 -top-10 w-40 h-40 bg-amber-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
                 <div class="flex items-start justify-between relative z-10">
                     <div>
-                        <span class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(217,119,6,0.5)] group-hover:scale-110 transition-transform duration-500">🥟</span>
-                        <h3 class="text-3xl font-black text-white group-hover:text-amber-400 transition-colors duration-300 tracking-tight">Samosa</h3>
+                        <span
+                            class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(217,119,6,0.5)] group-hover:scale-110 transition-transform duration-500">🥟</span>
+                        <h3
+                            class="text-3xl font-black text-white group-hover:text-amber-400 transition-colors duration-300 tracking-tight">
+                            Samosa</h3>
                     </div>
-                    <div class="glass-pill rounded-full px-5 py-2 font-black text-xl text-amber-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">₹15</div>
+                    <div
+                        class="glass-pill rounded-full px-5 py-2 font-black text-xl text-amber-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">
+                        ₹15</div>
                 </div>
                 <p class="mt-5 text-stone-300/90 leading-relaxed font-light relative z-10">
-                    Crispy golden pastry filled with spiced potatoes, peas, and aromatic herbs. A classic street food favorite.
+                    Crispy golden pastry filled with spiced potatoes, peas, and aromatic herbs. A classic street food
+                    favorite.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-2 relative z-10">
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-amber-200/70 rounded-full">Potato Filling</span>
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-amber-200/70 rounded-full">Crispy</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-amber-200/70 rounded-full">Potato
+                        Filling</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-amber-200/70 rounded-full">Crispy</span>
+                </div>
+                <div class="mt-6 relative z-10">
+                    <a href="{% url 'contact' %}" class="order-btn">
+                        Order
+                    </a>
                 </div>
             </div>
 
             <!-- Pakora -->
-            <div class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:-rotate-1 hover:border-orange-500/40 hover:shadow-[0_45px_100px_-20px_rgba(249,115,22,0.4)] relative overflow-hidden">
-                <div class="absolute -right-10 -top-10 w-40 h-40 bg-orange-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div
+                class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:-rotate-1 hover:border-orange-500/40 hover:shadow-[0_45px_100px_-20px_rgba(249,115,22,0.4)] relative overflow-hidden">
+                <div
+                    class="absolute -right-10 -top-10 w-40 h-40 bg-orange-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
                 <div class="flex items-start justify-between relative z-10">
                     <div>
-                        <span class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(234,88,12,0.5)] group-hover:scale-110 transition-transform duration-500">🥕</span>
-                        <h3 class="text-3xl font-black text-white group-hover:text-orange-400 transition-colors duration-300 tracking-tight">Pakoda</h3>
+                        <span
+                            class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(234,88,12,0.5)] group-hover:scale-110 transition-transform duration-500">🥕</span>
+                        <h3
+                            class="text-3xl font-black text-white group-hover:text-orange-400 transition-colors duration-300 tracking-tight">
+                            Pakoda</h3>
                     </div>
-                    <div class="glass-pill rounded-full px-5 py-2 font-black text-xl text-orange-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">₹20</div>
+                    <div
+                        class="glass-pill rounded-full px-5 py-2 font-black text-xl text-orange-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">
+                        ₹20</div>
                 </div>
                 <p class="mt-5 text-stone-300/90 leading-relaxed font-light relative z-10">
-                    Assortment of vegetable fritters dipped in spiced chickpea batter. Light, crunchy, and utterly addictive.
+                    Assortment of vegetable fritters dipped in spiced chickpea batter. Light, crunchy, and utterly
+                    addictive.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-2 relative z-10">
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-orange-200/70 rounded-full">Vegetable Mix</span>
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-orange-200/70 rounded-full">Crunchy</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-orange-200/70 rounded-full">Vegetable
+                        Mix</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-orange-200/70 rounded-full">Crunchy</span>
+                </div>
+                <div class="mt-6 relative z-10">
+                    <a href="{% url 'contact' %}" class="order-btn">
+                        Order
+                    </a>
                 </div>
             </div>
 
             <!-- Kachori -->
-            <div class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:rotate-1 hover:border-yellow-500/40 hover:shadow-[0_45px_100px_-20px_rgba(234,179,8,0.4)] relative overflow-hidden">
-                <div class="absolute -right-10 -top-10 w-40 h-40 bg-yellow-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div
+                class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:rotate-1 hover:border-yellow-500/40 hover:shadow-[0_45px_100px_-20px_rgba(234,179,8,0.4)] relative overflow-hidden">
+                <div
+                    class="absolute -right-10 -top-10 w-40 h-40 bg-yellow-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
                 <div class="flex items-start justify-between relative z-10">
                     <div>
-                        <span class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(202,138,4,0.5)] group-hover:scale-110 transition-transform duration-500">🥧</span>
-                        <h3 class="text-3xl font-black text-white group-hover:text-yellow-400 transition-colors duration-300 tracking-tight">Kachori</h3>
+                        <span
+                            class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(202,138,4,0.5)] group-hover:scale-110 transition-transform duration-500">🥧</span>
+                        <h3
+                            class="text-3xl font-black text-white group-hover:text-yellow-400 transition-colors duration-300 tracking-tight">
+                            Kachori</h3>
                     </div>
-                    <div class="glass-pill rounded-full px-5 py-2 font-black text-xl text-yellow-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">₹25</div>
+                    <div
+                        class="glass-pill rounded-full px-5 py-2 font-black text-xl text-yellow-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">
+                        ₹25</div>
                 </div>
                 <p class="mt-5 text-stone-300/90 leading-relaxed font-light relative z-10">
-                    Flaky pastry stuffed with spiced lentils and potatoes. A Rajasthani delicacy that's rich and flavorful.
+                    Flaky pastry stuffed with spiced lentils and potatoes. A Rajasthani delicacy that's rich and
+                    flavorful.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-2 relative z-10">
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-yellow-200/70 rounded-full">Lentil Filling</span>
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-yellow-200/70 rounded-full">Flaky</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-yellow-200/70 rounded-full">Lentil
+                        Filling</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-yellow-200/70 rounded-full">Flaky</span>
+                </div>
+                <div class="mt-6 relative z-10">
+                    <a href="{% url 'contact' %}" class="order-btn">
+                        Order
+                    </a>
                 </div>
             </div>
 
             <!-- Dhokla -->
-            <div class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:-rotate-1 hover:border-amber-600/40 hover:shadow-[0_45px_100px_-20px_rgba(217,119,6,0.4)] relative overflow-hidden">
-                <div class="absolute -right-10 -top-10 w-40 h-40 bg-amber-600/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div
+                class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:-rotate-1 hover:border-amber-600/40 hover:shadow-[0_45px_100px_-20px_rgba(217,119,6,0.4)] relative overflow-hidden">
+                <div
+                    class="absolute -right-10 -top-10 w-40 h-40 bg-amber-600/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
                 <div class="flex items-start justify-between relative z-10">
                     <div>
-                        <span class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(180,83,9,0.5)] group-hover:scale-110 transition-transform duration-500">🍰</span>
-                        <h3 class="text-3xl font-black text-white group-hover:text-amber-500 transition-colors duration-300 tracking-tight">Dhokla</h3>
+                        <span
+                            class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(180,83,9,0.5)] group-hover:scale-110 transition-transform duration-500">🍰</span>
+                        <h3
+                            class="text-3xl font-black text-white group-hover:text-amber-500 transition-colors duration-300 tracking-tight">
+                            Dhokla</h3>
                     </div>
-                    <div class="glass-pill rounded-full px-5 py-2 font-black text-xl text-amber-400 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">₹30</div>
+                    <div
+                        class="glass-pill rounded-full px-5 py-2 font-black text-xl text-amber-400 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">
+                        ₹30</div>
                 </div>
                 <p class="mt-5 text-stone-300/90 leading-relaxed font-light relative z-10">
                     Steamed fermented rice and lentil cake from Gujarat. Light, spongy, and served with tangy chutneys.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-2 relative z-10">
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-amber-200/70 rounded-full">Steamed</span>
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-amber-200/70 rounded-full">Fermented</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-amber-200/70 rounded-full">Steamed</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-amber-200/70 rounded-full">Fermented</span>
+                </div>
+                <div class="mt-6 relative z-10">
+                    <a href="{% url 'contact' %}" class="order-btn">
+                        Order
+                    </a>
                 </div>
             </div>
 
             <!-- Vada Pav -->
-            <div class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:rotate-1 hover:border-rose-500/40 hover:shadow-[0_45px_100px_-20px_rgba(225,29,72,0.4)] relative overflow-hidden">
-                <div class="absolute -right-10 -top-10 w-40 h-40 bg-rose-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div
+                class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:rotate-1 hover:border-rose-500/40 hover:shadow-[0_45px_100px_-20px_rgba(225,29,72,0.4)] relative overflow-hidden">
+                <div
+                    class="absolute -right-10 -top-10 w-40 h-40 bg-rose-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
                 <div class="flex items-start justify-between relative z-10">
                     <div>
-                        <span class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(190,18,60,0.5)] group-hover:scale-110 transition-transform duration-500">🥖</span>
-                        <h3 class="text-3xl font-black text-white group-hover:text-rose-400 transition-colors duration-300 tracking-tight">Vada Pav</h3>
+                        <span
+                            class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(190,18,60,0.5)] group-hover:scale-110 transition-transform duration-500">🥖</span>
+                        <h3
+                            class="text-3xl font-black text-white group-hover:text-rose-400 transition-colors duration-300 tracking-tight">
+                            Vada Pav</h3>
                     </div>
-                    <div class="glass-pill rounded-full px-5 py-2 font-black text-xl text-rose-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">₹20</div>
+                    <div
+                        class="glass-pill rounded-full px-5 py-2 font-black text-xl text-rose-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">
+                        ₹20</div>
                 </div>
                 <p class="mt-5 text-stone-300/90 leading-relaxed font-light relative z-10">
                     Mumbai's iconic street sandwich with spiced potato fritter in a pav bun. The ultimate comfort food.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-2 relative z-10">
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-rose-200/70 rounded-full">Mumbai Street</span>
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-rose-200/70 rounded-full">Spicy</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-rose-200/70 rounded-full">Mumbai
+                        Street</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-rose-200/70 rounded-full">Spicy</span>
+                </div>
+                <div class="mt-6 relative z-10">
+                    <a href="{% url 'contact' %}" class="order-btn">
+                        Order
+                    </a>
                 </div>
             </div>
 
             <!-- Bhelpuri -->
-            <div class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:-rotate-1 hover:border-yellow-400/40 hover:shadow-[0_45px_100px_-20px_rgba(250,204,21,0.4)] relative overflow-hidden md:col-span-2 lg:col-span-1">
-                <div class="absolute -right-10 -top-10 w-40 h-40 bg-yellow-400/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div
+                class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:-rotate-1 hover:border-yellow-400/40 hover:shadow-[0_45px_100px_-20px_rgba(250,204,21,0.4)] relative overflow-hidden md:col-span-2 lg:col-span-1">
+                <div
+                    class="absolute -right-10 -top-10 w-40 h-40 bg-yellow-400/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
                 <div class="flex items-start justify-between relative z-10">
                     <div>
-                        <span class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(234,179,8,0.5)] group-hover:scale-110 transition-transform duration-500">🥗</span>
-                        <h3 class="text-3xl font-black text-white group-hover:text-yellow-300 transition-colors duration-300 tracking-tight">Bhelpuri</h3>
+                        <span
+                            class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(234,179,8,0.5)] group-hover:scale-110 transition-transform duration-500">🥗</span>
+                        <h3
+                            class="text-3xl font-black text-white group-hover:text-yellow-300 transition-colors duration-300 tracking-tight">
+                            Bhelpuri</h3>
                     </div>
-                    <div class="glass-pill rounded-full px-5 py-2 font-black text-xl text-yellow-200 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">₹35</div>
+                    <div
+                        class="glass-pill rounded-full px-5 py-2 font-black text-xl text-yellow-200 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">
+                        ₹35</div>
                 </div>
                 <p class="mt-5 text-stone-300/90 leading-relaxed font-light relative z-10">
-                    A vibrant mix of puffed rice, vegetables, tangy chutneys, and sev. A explosion of textures and flavors.
+                    A vibrant mix of puffed rice, vegetables, tangy chutneys, and sev. A explosion of textures and
+                    flavors.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-2 relative z-10">
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-yellow-200/70 rounded-full">Puffed Rice</span>
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-yellow-200/70 rounded-full">Tangy</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-yellow-200/70 rounded-full">Puffed
+                        Rice</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-yellow-200/70 rounded-full">Tangy</span>
+                </div>
+                <div class="mt-6 relative z-10">
+                    <a href="{% url 'contact' %}" class="order-btn">
+                        Order   
+                    </a>
                 </div>
             </div>
 

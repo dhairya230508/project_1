@@ -17,5 +17,3 @@ class Contact(models.Model):
         verbose_name = "Contact"
         verbose_name_plural = "Contacts"
         ordering = ["-created_at"]
-        db_table = "contact"
-        db_table_comment = "Contact table"

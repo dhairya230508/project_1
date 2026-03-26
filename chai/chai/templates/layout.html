@@ -1,12 +1,13 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         {% block title %}
-            Chai Hub
+        Chai Hub
         {% endblock %}
     </title>
     <style>
@@ -24,116 +25,118 @@
 
         {% block style %}{% endblock %}
     </style>
+    {% block style %}{% endblock %}
     {% tailwind_css %}
 </head>
 
 <body class="bg-amber-50">
 
-<!-- Navbar -->
-<nav class="bg-amber-900 text-white p-4">
-    <div class="container mx-auto flex items-center justify-between">
-        <h1 class="text-2xl font-bold">ChaiHub</h1>
-        <ul class="flex items-center space-x-6">
-            <li><a href="{% url 'home' %}" class="transition hover:text-yellow-300">Home</a></li>
-            <li>
-                <div class="relative inline-block text-left" data-nav-dropdown>
-                    <button
-                        type="button"
-                        class="inline-flex items-center gap-x-1.5 rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 focus:ring-offset-amber-900"
-                        data-nav-dropdown-button
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        aria-controls="nav-options-menu"
-                    >
-                        Menu
-                        <svg viewBox="0 0 20 20" fill="currentColor" class="size-5 text-gray-300">
-                            <path d="M5.22  8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"></path>
-                        </svg>
-                    </button>
+    <!-- Navbar -->
+    <nav class="bg-amber-900 text-white p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <h1 class="text-2xl font-bold">ChaiHub</h1>
+            <ul class="flex items-center space-x-6">
+                <li><a href="{% url 'home' %}" class="transition hover:text-yellow-300">Home</a></li>
+                <li>
+                    <div class="relative inline-block text-left" data-nav-dropdown>
+                        <button type="button"
+                            class="inline-flex items-center gap-x-1.5 rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 focus:ring-offset-amber-900"
+                            data-nav-dropdown-button aria-expanded="false" aria-haspopup="true"
+                            aria-controls="nav-options-menu">
+                            Menu
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="size-5 text-gray-300">
+                                <path
+                                    d="M5.22  8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z">
+                                </path>
+                            </svg>
+                        </button>
 
-                    <div
-                        id="nav-options-menu"
-                        class="absolute right-0 z-50 mt-2 w-56 overflow-hidden rounded-md border border-amber-800 bg-gray-800 shadow-lg"
-                        data-nav-dropdown-menu
-                        role="menu"
-                        hidden
-                    >
-                        <div class="py-1">
-                            <a href="{% url 'menu' %}" class="block px-4 py-2 text-sm text-gray-300 transition hover:bg-gray-700 hover:text-white" role="menuitem">Chai</a>
-                            <a href="{% url 'food' %}" class="block px-4 py-2 text-sm text-gray-300 transition hover:bg-gray-700 hover:text-white" role="menuitem">Food</a>
-                            <a href="{% url 'combo' %}" class="block px-4 py-2 text-sm text-gray-300 transition hover:bg-gray-700 hover:text-white" role="menuitem">Combo</a>
+                        <div id="nav-options-menu"
+                            class="absolute right-0 z-50 mt-2 w-56 overflow-hidden rounded-md border border-amber-800 bg-gray-800 shadow-lg"
+                            data-nav-dropdown-menu role="menu" hidden>
+                            <div class="py-1">
+                                <a href="{% url 'menu' %}"
+                                    class="block px-4 py-2 text-sm text-gray-300 transition hover:bg-gray-700 hover:text-white"
+                                    role="menuitem">Chai</a>
+                                <a href="{% url 'food' %}"
+                                    class="block px-4 py-2 text-sm text-gray-300 transition hover:bg-gray-700 hover:text-white"
+                                    role="menuitem">Food</a>
+                                <a href="{% url 'combo' %}"
+                                    class="block px-4 py-2 text-sm text-gray-300 transition hover:bg-gray-700 hover:text-white"
+                                    role="menuitem">Combo</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </li>
-            <li><a href="{% url 'about' %}" class="transition hover:text-yellow-300">About</a></li>
-            <li><a href="#" class="transition hover:text-yellow-300">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+                </li>
+                <li><a href="{% url 'about' %}" class="transition hover:text-yellow-300">About</a></li>
+                <li><a href="{% url 'contact' %}" class="transition hover:text-yellow-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-{% block content %}
-{% endblock %}
+    {% block content %}
+    {% endblock %}
 
-<!-- Footer -->
-<footer class="bg-amber-900 text-white text-center p-4">
-    <p>(c) 2026 ChaiHub | Made with love for chai lovers</p>
-</footer>
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white text-center p-4">
+        <p> 2026 ChaiHub | Made with love for chai lovers</p>
+    </footer>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const dropdown = document.querySelector('[data-nav-dropdown]');
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdown = document.querySelector('[data-nav-dropdown]');
 
-        if (!dropdown) {
-            return;
-        }
-
-        const button = dropdown.querySelector('[data-nav-dropdown-button]');
-        const menu = dropdown.querySelector('[data-nav-dropdown-menu]');
-
-        if (!button || !menu) {
-            return;
-        }
-
-        function closeMenu() {
-            menu.hidden = true;
-            button.setAttribute('aria-expanded', 'false');
-        }
-
-        function openMenu() {
-            menu.hidden = false;
-            button.setAttribute('aria-expanded', 'true');
-        }
-
-        button.addEventListener('click', function (event) {
-            event.stopPropagation();
-
-            if (menu.hidden) {
-                openMenu();
+            if (!dropdown) {
                 return;
             }
 
-            closeMenu();
-        });
+            const button = dropdown.querySelector('[data-nav-dropdown-button]');
+            const menu = dropdown.querySelector('[data-nav-dropdown-menu]');
 
-        document.addEventListener('click', function (event) {
-            if (!dropdown.contains(event.target)) {
-                closeMenu();
+            if (!button || !menu) {
+                return;
             }
-        });
 
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape') {
-                closeMenu();
-                button.focus();
+            function closeMenu() {
+                menu.hidden = true;
+                button.setAttribute('aria-expanded', 'false');
             }
-        });
 
-        menu.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', closeMenu);
+            function openMenu() {
+                menu.hidden = false;
+                button.setAttribute('aria-expanded', 'true');
+            }
+
+            button.addEventListener('click', function (event) {
+                event.stopPropagation();
+
+                if (menu.hidden) {
+                    openMenu();
+                    return;
+                }
+
+                closeMenu();
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!dropdown.contains(event.target)) {
+                    closeMenu();
+                }
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeMenu();
+                    button.focus();
+                }
+            });
+
+            menu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', closeMenu);
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
+
 </html>

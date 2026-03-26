@@ -7,57 +7,99 @@ Chai Combos - The Perfect Pairing
 {% block content %}
 <style>
     @keyframes slow-spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
     }
-    
+
     @keyframes float {
-        0%, 100% { transform: translateY(0px) scale(1); }
-        50% { transform: translateY(-20px) scale(1.02); }
+
+        0%,
+        100% {
+            transform: translateY(0px) scale(1);
+        }
+
+        50% {
+            transform: translateY(-20px) scale(1.02);
+        }
     }
 
     .animate-slow-spin {
         animation: slow-spin 25s linear infinite;
     }
-    
+
     .animate-float {
         animation: float 6s ease-in-out infinite;
     }
-    
+
     .animate-float-delayed {
         animation: float 7s ease-in-out infinite;
         animation-delay: 2s;
     }
 
     .glass-card {
-        background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.01) 100%);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(255,255,255,0.1);
-        box-shadow: 0 30px 60px -15px rgba(0,0,0,0.5), inset 0 1px 0 0 rgba(255,255,255,0.2);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
     }
-    
+
     .glass-pill {
-        background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.03));
-        border: 1px solid rgba(255,255,255,0.2);
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+
+    .order-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        padding: 0.5rem 1.5rem;
+        font-size: 0.875rem;
+        font-weight: 900;
+        color: rgb(30 27 23);
+        /* stone-950-ish */
+        background: rgba(234, 88, 12, 0.9);
+        /* amber-500/90-ish */
+        box-shadow: 0 15px 35px -18px rgba(234, 88, 12, 0.7);
+        transition: background-color 150ms ease, transform 150ms ease;
+        text-decoration: none;
+    }
+
+    .order-btn:hover {
+        background: rgb(251 191 36);
+        /* amber-400-ish */
+        transform: translateY(-1px);
     }
 </style>
 
 <!-- Full Bleed Dark Section -->
-<section class="relative min-h-[90vh] bg-stone-950 overflow-hidden w-full m-0 p-0 text-white selection:bg-amber-500/30 selection:text-amber-200">
-    
+<section
+    class="relative min-h-[90vh] bg-stone-950 overflow-hidden w-full m-0 p-0 text-white selection:bg-amber-500/30 selection:text-amber-200">
+
     <!-- Dynamic Ambient Background Orbs -->
-    <div class="absolute -top-1/4 -right-1/4 h-[800px] w-[800px] rounded-full bg-gradient-to-br from-orange-600/30 to-red-600/10 blur-[120px] mix-blend-screen animate-slow-spin opacity-80 pointer-events-none"></div>
-    <div class="absolute -bottom-1/4 -left-1/4 h-[900px] w-[900px] rounded-full bg-gradient-to-tr from-amber-600/20 to-yellow-500/10 blur-[130px] mix-blend-screen animate-slow-spin opacity-70 pointer-events-none" style="animation-direction: reverse;"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-orange-500/10 blur-[100px] mix-blend-screen pointer-events-none"></div>
+    <div
+        class="absolute -top-1/4 -right-1/4 h-[800px] w-[800px] rounded-full bg-gradient-to-br from-orange-600/30 to-red-600/10 blur-[120px] mix-blend-screen animate-slow-spin opacity-80 pointer-events-none">
+    </div>
+    <div class="absolute -bottom-1/4 -left-1/4 h-[900px] w-[900px] rounded-full bg-gradient-to-tr from-amber-600/20 to-yellow-500/10 blur-[130px] mix-blend-screen animate-slow-spin opacity-70 pointer-events-none"
+        style="animation-direction: reverse;"></div>
+    <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-orange-500/10 blur-[100px] mix-blend-screen pointer-events-none">
+    </div>
 
 
     <div class="relative mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28 z-10">
-        
+
         <!-- Header -->
         <div class="text-center max-w-3xl mx-auto mb-20 animate-float">
-            <span class="inline-block glass-pill px-5 py-2 rounded-full text-xs font-bold tracking-[0.3em] uppercase text-amber-300 mb-6 shadow-2xl backdrop-blur-md">
+            <span
+                class="inline-block glass-pill px-5 py-2 rounded-full text-xs font-bold tracking-[0.3em] uppercase text-amber-300 mb-6 shadow-2xl backdrop-blur-md">
                 Perfect Pairings
             </span>
             <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight">
@@ -66,124 +108,220 @@ Chai Combos - The Perfect Pairing
                 </span>
             </h1>
             <p class="text-lg md:text-xl text-stone-300/80 font-light leading-relaxed max-w-2xl mx-auto">
-                Elevate your tea time with our specially curated combinations. The perfect harmony of piping hot chai and delectable snacks, bundled just for you.
+                Elevate your tea time with our specially curated combinations. The perfect harmony of piping hot chai
+                and delectable snacks, bundled just for you.
             </p>
         </div>
 
         <!-- Grid Layout -->
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 perspective-[1000px]">
-            
+
             <!-- The Classic Duo -->
-            <div class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:rotate-1 hover:border-purple-500/40 hover:shadow-[0_45px_100px_-20px_rgba(168,85,247,0.4)] relative overflow-hidden">
-                <div class="absolute -right-10 -top-10 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div
+                class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:rotate-1 hover:border-purple-500/40 hover:shadow-[0_45px_100px_-20px_rgba(168,85,247,0.4)] relative overflow-hidden">
+                <div
+                    class="absolute -right-10 -top-10 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
                 <div class="flex items-start justify-between relative z-10">
                     <div>
-                        <span class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:scale-110 transition-transform duration-500">☕🥟</span>
-                        <h3 class="text-3xl font-black text-white group-hover:text-purple-400 transition-colors duration-300 tracking-tight">Classic Duo</h3>
+                        <span
+                            class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:scale-110 transition-transform duration-500">☕🥟</span>
+                        <h3
+                            class="text-3xl font-black text-white group-hover:text-purple-400 transition-colors duration-300 tracking-tight">
+                            Classic Duo</h3>
                     </div>
-                    <div class="glass-pill rounded-full px-5 py-2 font-black text-xl text-purple-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">₹40</div>
+                    <div
+                        class="glass-pill rounded-full px-5 py-2 font-black text-xl text-purple-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">
+                        ₹40</div>
                 </div>
                 <p class="mt-5 text-stone-300/90 leading-relaxed font-light relative z-10">
-                    The legendary pairing of cutting chai with two crispy, golden potato samosas. A timeless classic that never disappoints.
+                    The legendary pairing of cutting chai with two crispy, golden potato samosas. A timeless classic
+                    that never disappoints.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-2 relative z-10">
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-purple-200/70 rounded-full">Cutting Chai</span>
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-purple-200/70 rounded-full">2x Samosa</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-purple-200/70 rounded-full">Cutting
+                        Chai</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-purple-200/70 rounded-full">2x
+                        Samosa</span>
+                </div>
+                <div class="mt-6 relative z-10">
+                    <a href="{% url 'contact' %}" class="order-btn">Order</a>
                 </div>
             </div>
 
             <!-- Monsoon Magic -->
-            <div class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:-rotate-1 hover:border-pink-500/40 hover:shadow-[0_45px_100px_-20px_rgba(236,72,153,0.4)] relative overflow-hidden">
-                <div class="absolute -right-10 -top-10 w-40 h-40 bg-pink-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div
+                class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:-rotate-1 hover:border-pink-500/40 hover:shadow-[0_45px_100px_-20px_rgba(236,72,153,0.4)] relative overflow-hidden">
+                <div
+                    class="absolute -right-10 -top-10 w-40 h-40 bg-pink-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
                 <div class="flex items-start justify-between relative z-10">
                     <div>
-                        <span class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(236,72,153,0.5)] group-hover:scale-110 transition-transform duration-500">🌧️🥕</span>
-                        <h3 class="text-3xl font-black text-white group-hover:text-pink-400 transition-colors duration-300 tracking-tight">Monsoon Magic</h3>
+                        <span
+                            class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(236,72,153,0.5)] group-hover:scale-110 transition-transform duration-500">🌧️🥕</span>
+                        <h3
+                            class="text-3xl font-black text-white group-hover:text-pink-400 transition-colors duration-300 tracking-tight">
+                            Monsoon Magic</h3>
                     </div>
-                    <div class="glass-pill rounded-full px-5 py-2 font-black text-xl text-pink-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">₹50</div>
+                    <div
+                        class="glass-pill rounded-full px-5 py-2 font-black text-xl text-pink-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">
+                        ₹50</div>
                 </div>
                 <p class="mt-5 text-stone-300/90 leading-relaxed font-light relative z-10">
-                    Embrace the rainy days with a large cup of ginger tea served alongside a generous portion of mixed vegetable pakodas.
+                    Embrace the rainy days with a large cup of ginger tea served alongside a generous portion of mixed
+                    vegetable pakodas.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-2 relative z-10">
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-pink-200/70 rounded-full">Adrak Chai</span>
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-pink-200/70 rounded-full">Mix Pakoda</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-pink-200/70 rounded-full">Adrak
+                        Chai</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-pink-200/70 rounded-full">Mix
+                        Pakoda</span>
+                </div>
+                <div class="mt-6 relative z-10">
+                    <a href="{% url 'contact' %}" class="order-btn">Order</a>
                 </div>
             </div>
 
             <!-- Mumbai Special -->
-            <div class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:rotate-1 hover:border-red-500/40 hover:shadow-[0_45px_100px_-20px_rgba(239,68,68,0.4)] relative overflow-hidden">
-                <div class="absolute -right-10 -top-10 w-40 h-40 bg-red-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div
+                class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:rotate-1 hover:border-red-500/40 hover:shadow-[0_45px_100px_-20px_rgba(239,68,68,0.4)] relative overflow-hidden">
+                <div
+                    class="absolute -right-10 -top-10 w-40 h-40 bg-red-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
                 <div class="flex items-start justify-between relative z-10">
                     <div>
-                        <span class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(239,68,68,0.5)] group-hover:scale-110 transition-transform duration-500">🌆🥖</span>
-                        <h3 class="text-3xl font-black text-white group-hover:text-red-400 transition-colors duration-300 tracking-tight">Mumbai Special</h3>
+                        <span
+                            class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(239,68,68,0.5)] group-hover:scale-110 transition-transform duration-500">🌆🥖</span>
+                        <h3
+                            class="text-3xl font-black text-white group-hover:text-red-400 transition-colors duration-300 tracking-tight">
+                            Mumbai Special</h3>
                     </div>
-                    <div class="glass-pill rounded-full px-5 py-2 font-black text-xl text-red-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">₹45</div>
+                    <div
+                        class="glass-pill rounded-full px-5 py-2 font-black text-xl text-red-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">
+                        ₹45</div>
                 </div>
                 <p class="mt-5 text-stone-300/90 leading-relaxed font-light relative z-10">
-                    Feel the pulse of Mumbai with our strong masala chai and a spicy vada pav, served with iconic red and green chutneys.
+                    Feel the pulse of Mumbai with our strong masala chai and a spicy vada pav, served with iconic red
+                    and green chutneys.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-2 relative z-10">
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-red-200/70 rounded-full">Masala Chai</span>
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-red-200/70 rounded-full">Vada Pav</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-red-200/70 rounded-full">Masala
+                        Chai</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-red-200/70 rounded-full">Vada
+                        Pav</span>
+                </div>
+                <div class="mt-6 relative z-10">
+                    <a href="{% url 'contact' %}" class="order-btn">Order</a>
                 </div>
             </div>
 
             <!-- Sweet & Savory -->
-            <div class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:-rotate-1 hover:border-fuchsia-500/40 hover:shadow-[0_45px_100px_-20px_rgba(217,70,239,0.4)] relative overflow-hidden">
-                <div class="absolute -right-10 -top-10 w-40 h-40 bg-fuchsia-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div
+                class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:-rotate-1 hover:border-fuchsia-500/40 hover:shadow-[0_45px_100px_-20px_rgba(217,70,239,0.4)] relative overflow-hidden">
+                <div
+                    class="absolute -right-10 -top-10 w-40 h-40 bg-fuchsia-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
                 <div class="flex items-start justify-between relative z-10">
                     <div>
-                        <span class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(217,70,239,0.5)] group-hover:scale-110 transition-transform duration-500">🍰🌶️</span>
-                        <h3 class="text-3xl font-black text-white group-hover:text-fuchsia-400 transition-colors duration-300 tracking-tight">Gujarati Treat</h3>
+                        <span
+                            class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(217,70,239,0.5)] group-hover:scale-110 transition-transform duration-500">🍰🌶️</span>
+                        <h3
+                            class="text-3xl font-black text-white group-hover:text-fuchsia-400 transition-colors duration-300 tracking-tight">
+                            Gujarati Treat</h3>
                     </div>
-                    <div class="glass-pill rounded-full px-5 py-2 font-black text-xl text-fuchsia-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">₹65</div>
+                    <div
+                        class="glass-pill rounded-full px-5 py-2 font-black text-xl text-fuchsia-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">
+                        ₹65</div>
                 </div>
                 <p class="mt-5 text-stone-300/90 leading-relaxed font-light relative z-10">
-                    A perfect balance of flavors. Enjoy our premium cardamom tea with spongy dhokla and hot, crispy jalebis.
+                    A perfect balance of flavors. Enjoy our premium cardamom tea with spongy dhokla and hot, crispy
+                    jalebis.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-2 relative z-10">
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-fuchsia-200/70 rounded-full">Elaichi Chai</span>
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-fuchsia-200/70 rounded-full">Dhokla & Jalebi</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-fuchsia-200/70 rounded-full">Elaichi
+                        Chai</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-fuchsia-200/70 rounded-full">Dhokla
+                        & Jalebi</span>
+                </div>
+                <div class="mt-6 relative z-10">
+                    <a href="{% url 'contact' %}" class="order-btn">Order</a>
                 </div>
             </div>
 
             <!-- The Royal Treat -->
-            <div class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:rotate-1 hover:border-rose-500/40 hover:shadow-[0_45px_100px_-20px_rgba(244,63,94,0.4)] relative overflow-hidden">
-                <div class="absolute -right-10 -top-10 w-40 h-40 bg-rose-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div
+                class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:rotate-1 hover:border-rose-500/40 hover:shadow-[0_45px_100px_-20px_rgba(244,63,94,0.4)] relative overflow-hidden">
+                <div
+                    class="absolute -right-10 -top-10 w-40 h-40 bg-rose-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
                 <div class="flex items-start justify-between relative z-10">
                     <div>
-                        <span class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(244,63,94,0.5)] group-hover:scale-110 transition-transform duration-500">👑🥧</span>
-                        <h3 class="text-3xl font-black text-white group-hover:text-rose-400 transition-colors duration-300 tracking-tight">Royal Feast</h3>
+                        <span
+                            class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(244,63,94,0.5)] group-hover:scale-110 transition-transform duration-500">👑🥧</span>
+                        <h3
+                            class="text-3xl font-black text-white group-hover:text-rose-400 transition-colors duration-300 tracking-tight">
+                            Royal Feast</h3>
                     </div>
-                    <div class="glass-pill rounded-full px-5 py-2 font-black text-xl text-rose-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">₹75</div>
+                    <div
+                        class="glass-pill rounded-full px-5 py-2 font-black text-xl text-rose-300 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">
+                        ₹75</div>
                 </div>
                 <p class="mt-5 text-stone-300/90 leading-relaxed font-light relative z-10">
-                    Feast like royalty with our rich saffron and almond infused tea, paired with two flaky, stuffed Rajasthani kachoris.
+                    Feast like royalty with our rich saffron and almond infused tea, paired with two flaky, stuffed
+                    Rajasthani kachoris.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-2 relative z-10">
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-rose-200/70 rounded-full">Kesar Chai</span>
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-rose-200/70 rounded-full">2x Kachori</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-rose-200/70 rounded-full">Kesar
+                        Chai</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-rose-200/70 rounded-full">2x
+                        Kachori</span>
+                </div>
+                <div class="mt-6 relative z-10">
+                    <a href="{% url 'contact' %}" class="order-btn">Order</a>
                 </div>
             </div>
 
             <!-- Light Bite -->
-            <div class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:-rotate-1 hover:border-purple-400/40 hover:shadow-[0_45px_100px_-20px_rgba(192,132,252,0.4)] relative overflow-hidden md:col-span-2 lg:col-span-1">
-                <div class="absolute -right-10 -top-10 w-40 h-40 bg-purple-400/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div
+                class="group glass-card rounded-[2.5rem] p-8 transition-all duration-700 hover:-translate-y-4 hover:-rotate-1 hover:border-purple-400/40 hover:shadow-[0_45px_100px_-20px_rgba(192,132,252,0.4)] relative overflow-hidden md:col-span-2 lg:col-span-1">
+                <div
+                    class="absolute -right-10 -top-10 w-40 h-40 bg-purple-400/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
                 <div class="flex items-start justify-between relative z-10">
                     <div>
-                        <span class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(192,132,252,0.5)] group-hover:scale-110 transition-transform duration-500">🍃🥗</span>
-                        <h3 class="text-3xl font-black text-white group-hover:text-purple-300 transition-colors duration-300 tracking-tight">Light Bite</h3>
+                        <span
+                            class="text-5xl inline-block mb-4 filter drop-shadow-[0_0_15px_rgba(192,132,252,0.5)] group-hover:scale-110 transition-transform duration-500">🍃🥗</span>
+                        <h3
+                            class="text-3xl font-black text-white group-hover:text-purple-300 transition-colors duration-300 tracking-tight">
+                            Light Bite</h3>
                     </div>
-                    <div class="glass-pill rounded-full px-5 py-2 font-black text-xl text-purple-200 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">₹60</div>
+                    <div
+                        class="glass-pill rounded-full px-5 py-2 font-black text-xl text-purple-200 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.5)]">
+                        ₹60</div>
                 </div>
                 <p class="mt-5 text-stone-300/90 leading-relaxed font-light relative z-10">
-                    For those who prefer keeping it light. A refreshing cup of lemon honey tea with a large portion of zesty bhelpuri.
+                    For those who prefer keeping it light. A refreshing cup of lemon honey tea with a large portion of
+                    zesty bhelpuri.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-2 relative z-10">
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-purple-200/70 rounded-full">Lemon Tea</span>
-                    <span class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-purple-200/70 rounded-full">Bhelpuri</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-purple-200/70 rounded-full">Lemon
+                        Tea</span>
+                    <span
+                        class="border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-purple-200/70 rounded-full">Bhelpuri</span>
+                </div>
+                <div class="mt-6 relative z-10">
+                    <a href="{% url 'contact' %}" class="order-btn">Order</a>
                 </div>
             </div>
 
